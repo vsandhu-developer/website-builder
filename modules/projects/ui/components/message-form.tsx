@@ -43,7 +43,7 @@ export default function MessageForm({ projectId }: Props) {
         queryClient.invalidateQueries(
           trpc.messages.getMany.queryOptions({ projectId })
         );
-        toast.success(`Generation Working`);
+        toast.success(`Generation Started`);
       },
       onError: (error) => {
         toast.error(`An Error Occured ${error}`);
